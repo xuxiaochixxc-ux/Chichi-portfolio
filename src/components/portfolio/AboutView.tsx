@@ -70,7 +70,7 @@ export const AboutView = () => {
       <div className="col-span-12 md:col-span-5">
         <div className="relative aspect-[4/5] overflow-hidden border border-border bg-secondary/40">
           <img
-            src="https://cdn.enter.pro/resources/uid_100033229/8fa21a69-ae4b-48.jpg"
+            src="/assets/profile/profile.jpg"
             alt="Portrait of Xiaochi Xu"
             className="h-full w-full object-cover"
           />

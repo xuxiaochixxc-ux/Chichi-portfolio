@@ -18,7 +18,7 @@ export type BeyondPhoto = {
   offset?: "none" | "low";
 };
 
-export const urbanDesignPortfolioPdfUrl = "https://cdn.enter.pro/resources/uid_100033229/57eb7171-ec23-4b.pdf";
+export const urbanDesignPortfolioPdfUrl = "/assets/documents/urban-design-portfolio.pdf";
 
 export const beyondVideos: BeyondVideo[] = [
   {
@@ -79,21 +79,21 @@ export type LifePhoto = {
 export const lifePhotos: LifePhoto[] = [
   {
     id: "life-photo-01",
-    src: "https://cdn.enter.pro/resources/uid_100033229/fafddfd4-8f69-42.jpg",
+    src: "/assets/life/photo-01.jpg",
     alt: "Lifting a dumbbell during a shoulder press at the gym",
     orientation: "portrait",
     aspectRatio: 0.7493,
   },
   {
     id: "life-photo-02",
-    src: "https://cdn.enter.pro/resources/uid_100033229/db906066-b88d-46.jpg",
+    src: "/assets/life/photo-02.jpg",
     alt: "Friends gathered together by a riverside promenade",
     orientation: "landscape",
     aspectRatio: 1.25,
   },
   {
     id: "life-photo-03",
-    src: "https://cdn.enter.pro/resources/uid_100033229/781509b4-68d5-4d.jpg",
+    src: "/assets/life/photo-03.jpg",
     alt: "Looking up at the spires of Prague Castle and St. Vitus Cathedral",
     orientation: "portrait",
     aspectRatio: 0.6667,
@@ -101,21 +101,21 @@ export const lifePhotos: LifePhoto[] = [
   },
   {
     id: "life-photo-04",
-    src: "https://cdn.enter.pro/resources/uid_100033229/689db83d-cf25-4a.jpg",
+    src: "/assets/life/photo-04.jpg",
     alt: "A grassy alpine ridge with hikers walking along the cliff edge",
     orientation: "square",
     aspectRatio: 1,
   },
   {
     id: "life-photo-05",
-    src: "https://cdn.enter.pro/resources/uid_100033229/8df051cd-106a-4c.jpg",
+    src: "/assets/life/photo-05.jpg",
     alt: "Resting against a wall beneath blooming cherry blossoms in a graduation gown",
     orientation: "landscape",
     aspectRatio: 1.3328,
   },
   {
     id: "life-photo-06",
-    src: "https://cdn.enter.pro/resources/uid_100033229/a03bcc19-e683-4a.jpg",
+    src: "/assets/life/photo-06.jpg",
     alt: "A cobblestone street leading toward a green-domed church",
     orientation: "portrait",
     aspectRatio: 0.7499,
@@ -123,14 +123,14 @@ export const lifePhotos: LifePhoto[] = [
   },
   {
     id: "life-photo-07",
-    src: "https://cdn.enter.pro/resources/uid_100033229/11c91fb1-19a7-45.jpg",
+    src: "/assets/life/photo-07.jpg",
     alt: "Sitting on the grass beside a whimsical stone sculpture and palm trees",
     orientation: "landscape",
     aspectRatio: 1.3336,
   },
   {
     id: "life-photo-08",
-    src: "https://cdn.enter.pro/resources/uid_100033229/375ebbbc-6dc0-4e.jpg",
+    src: "/assets/life/photo-08.jpg",
     alt: "A narrow Hong Kong street lined with high-rise buildings and shop signs",
     orientation: "portrait",
     aspectRatio: 0.7499,
@@ -138,14 +138,14 @@ export const lifePhotos: LifePhoto[] = [
   },
   {
     id: "life-photo-09",
-    src: "https://cdn.enter.pro/resources/uid_100033229/52bc7da3-c0cb-40.jpg",
+    src: "/assets/life/photo-09.jpg",
     alt: "Holding an architectural model in front of urban design presentation boards",
     orientation: "landscape",
     aspectRatio: 1.3333,
   },
   {
     id: "life-photo-10",
-    src: "https://cdn.enter.pro/resources/uid_100033229/da56c55c-c9e1-49.jpg",
+    src: "/assets/life/photo-10.jpg",
     alt: "Riders on a swinging fairground carousel against a blue sky",
     orientation: "landscape",
     aspectRatio: 1.3336,
@@ -153,7 +153,7 @@ export const lifePhotos: LifePhoto[] = [
   },
   {
     id: "life-photo-11",
-    src: "https://cdn.enter.pro/resources/uid_100033229/89ead4f8-0220-44.jpg",
+    src: "/assets/life/photo-11.jpg",
     alt: "Climbing an indoor bouldering wall",
     orientation: "portrait",
     aspectRatio: 0.5626,
