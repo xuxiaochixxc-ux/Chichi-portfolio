@@ -1,0 +1,251 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Editorial palette — warm off-white paper + near-black ink */
+    --background: 40 55% 96%;
+    --foreground: 30 10% 8%;
+
+    --card: 40 55% 96%;
+    --card-foreground: 30 10% 8%;
+
+    --popover: 40 55% 96%;
+    --popover-foreground: 30 10% 8%;
+
+    --primary: 30 10% 8%;
+    --primary-foreground: 40 55% 96%;
+
+    --secondary: 36 18% 90%;
+    --secondary-foreground: 30 10% 8%;
+
+    --muted: 36 18% 90%;
+    --muted-foreground: 30 8% 42%;
+
+    --accent: 36 18% 90%;
+    --accent-foreground: 30 10% 8%;
+
+    --destructive: 17 69% 46%;
+    --destructive-foreground: 40 55% 96%;
+
+    --border: 30 10% 85%;
+    --input: 30 10% 85%;
+    --ring: 30 10% 8%;
+
+    --radius: 0.25rem;
+
+    /* Latin typography; Han glyphs continue through the existing system fallback. */
+    --font-display: "Jost", ui-sans-serif, system-ui, sans-serif;
+    --font-sans: "Golos Text", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
+    /* Editorial accent inks (mirrored as Tailwind colors in tailwind.config.ts) */
+    --accent-blue: 211 99% 30%;
+    --accent-yellow: 45 83% 56%;
+    --accent-red: 17 69% 46%;
+    --hero-name-background: 38 22% 86%;
+    --cursor-hero-reveal: 30 10% 7%;
+
+    --sidebar-background: 40 55% 96%;
+    --sidebar-foreground: 30 10% 8%;
+    --sidebar-primary: 30 10% 8%;
+    --sidebar-primary-foreground: 40 55% 96%;
+    --sidebar-accent: 36 18% 90%;
+    --sidebar-accent-foreground: 30 10% 8%;
+    --sidebar-border: 30 10% 85%;
+    --sidebar-ring: 30 10% 8%;
+  }
+
+  .dark {
+    --background: 60 6% 7%;
+    --foreground: 44 20% 89%;
+
+    --card: 60 6% 7%;
+    --card-foreground: 44 20% 89%;
+
+    --popover: 60 6% 7%;
+    --popover-foreground: 44 20% 89%;
+
+    --primary: 44 20% 89%;
+    --primary-foreground: 60 6% 7%;
+
+    --secondary: 50 5% 12%;
+    --secondary-foreground: 44 20% 89%;
+
+    --muted: 50 5% 12%;
+    --muted-foreground: 44 5% 57%;
+
+    --accent: 50 5% 12%;
+    --accent-foreground: 44 20% 89%;
+
+    --destructive: 17 69% 46%;
+    --destructive-foreground: 44 20% 89%;
+
+    --border: 44 20% 89% / 0.14;
+    --input: 44 20% 89% / 0.14;
+    --ring: 44 20% 89%;
+    --hero-name-background: 44 7% 18%;
+    --cursor-hero-reveal: 44 20% 89%;
+
+    --sidebar-background: 60 6% 7%;
+    --sidebar-foreground: 44 20% 89%;
+    --sidebar-primary: 44 20% 89%;
+    --sidebar-primary-foreground: 60 6% 7%;
+    --sidebar-accent: 50 5% 12%;
+    --sidebar-accent-foreground: 44 20% 89%;
+    --sidebar-border: 44 20% 89% / 0.14;
+    --sidebar-ring: 44 20% 89%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html,
+  body,
+  #root,
+  [class*="bg-"],
+  [class*="text-"],
+  [class*="border-"] {
+    transition-property: background-color, color, border-color;
+    transition-duration: 600ms, 450ms, 450ms;
+    transition-timing-function: ease;
+  }
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes typewriter-caret-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.typewriter-caret {
+  animation: typewriter-caret-blink 0.9s steps(1, end) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body,
+  #root,
+  [class*="bg-"],
+  [class*="text-"],
+  [class*="border-"] {
+    transition-duration: 0ms !important;
+  }
+
+  .typewriter-caret {
+    animation: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor-active,
+  .custom-cursor-active body,
+  .custom-cursor-active body * {
+    cursor: none !important;
+  }
+
+  .custom-cursor-active .hero-cursor-ink {
+    background-image: radial-gradient(
+      circle var(--cursor-radius, 15px) at var(--cursor-x, -100px) var(--cursor-y, -100px),
+      hsl(var(--cursor-hero-reveal)) 0 calc(var(--cursor-radius, 15px) - 1px),
+      var(--hero-ink-base) var(--cursor-radius, 15px)
+    );
+    background-attachment: fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .custom-cursor-active input,
+  .custom-cursor-active textarea,
+  .custom-cursor-active select,
+  .custom-cursor-active [contenteditable="true"] {
+    cursor: auto !important;
+  }
+
+  .custom-cursor-active input,
+  .custom-cursor-active textarea,
+  .custom-cursor-active [contenteditable="true"] {
+    cursor: text !important;
+  }
+}
+
+.hero-cursor-ink {
+  --hero-ink-base: hsl(var(--foreground));
+  color: var(--hero-ink-base);
+}
+
+.hero-cursor-ink-muted {
+  --hero-ink-base: hsl(var(--muted-foreground));
+}
+
+.hero-cursor-ink-shadow {
+  --hero-ink-base: hsl(var(--muted-foreground) / 0.35);
+}
+
+.hero-name-background {
+  color: hsl(var(--hero-name-background));
+}
+
+.custom-cursor-layer,
+.custom-cursor-layer * {
+  pointer-events: none !important;
+}
+
+@keyframes scroll-mouse-wheel {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  80%,
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 7px);
+  }
+}
+
+.scroll-mouse-wheel {
+  animation: scroll-mouse-wheel 1.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-mouse-wheel {
+    animation: none;
+  }
+}
+
+@layer components {
+  /* Hairline rule reused between editorial rows/sections */
+  .divider-line {
+    @apply border-t border-border;
+  }
+
+  /* 12-column editorial grid wrapper, centered with a max line-length */
+  .container-grid {
+    @apply mx-auto grid w-full max-w-6xl grid-cols-12 gap-x-4 px-6 md:gap-x-6 md:px-10;
+  }
+}
