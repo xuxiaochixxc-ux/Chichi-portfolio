@@ -1,0 +1,18 @@
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <circle cx="256" cy="256" r="238"
+    fill="#F6F1E8"
+    stroke="#D7C5A7"
+    stroke-width="12"/>
+
+  <text x="178" y="352"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="300"
+    font-weight="700"
+    fill="#4A4A4A">X</text>
+
+  <text x="204" y="354"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="286"
+    font-weight="400"
+    fill="#CDBB9C">C</text>
+</svg>
